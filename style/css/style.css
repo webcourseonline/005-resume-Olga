@@ -1,0 +1,70 @@
+h2, h3, header, html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f0f0f0;
+}
+
+.header {
+	background: #faa4a2;
+}
+
+.page {
+	background: #fff;
+
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.inforn{
+	padding: 0 40px;
+
+}
+
+.text_right {
+	text-align: right;
+	font-weight: bold;
+}
+
+.text_center {
+	text-align: center;
+	padding: 10px;
+}
+
+.color_border {
+	height: 4px;
+	background: #dbdbdb;
+}
+
+.img img{
+	margin-top: 10px; 
+	width: 80%;
+	border-radius: 100%;
+	border: 3px solid #faa4a2;
+}
+
+.img{
+	text-align: center;
+}
+
+.footer {
+	margin-top: 20px;
+	height: 100px;
+	background: #f5a59f;
+}
+
+@media (max-width: 1000px) {
+     .text_right {
+		text-align: left;
+		font-weight: bold;
+	}
+
+	.img img{
+		margin-top: 10px; 
+		width: 50%;
+	}
+ }
