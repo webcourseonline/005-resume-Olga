@@ -1,116 +1,218 @@
-<html> 
-	<head> 
-		<meta charset="utf-8">
-		<title>Cherepovska Olha</title>
-		<link rel="stylesheet" type="text/css" href="style/css/bootstrap.min.css">
-    	<link rel="stylesheet" type="text/css" href="style/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" type="text/css" href="style/css/style.css"> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cherepovska Olha</title>
+    <link rel="stylesheet" type="text/css" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
 
-	</head> 
-	<body> 
-		<header class=" header"> 
-			<h2 class="text_center">Resume</h2>
-			<h2 class="text_center">Cherepovska Olha</h2> 
-			<h3 class="text_center">Objective: Permanent work - web-developer</h3> 	
-		</header> 
-			
-		<div class="container">
-			<div class="row page">
-				<div class="col-md-3  img">
-					<img src="img/1.jpg">
-				</div>
-				<div class="col-md-9 color">
-					<div class="row text_inf">
-						<p class="col-md-3 inforn text_right">City:</p>
-						<p class="col-md-3 inforn">Kharkiv</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--<script>$.ajax({-->
+        <!--url: "http://10.3.2.21:8080/",-->
 
-						<p class="col-md-3 inforn text_right">Birthdate:</p>
-						<p class="col-md-3 inforn">26.09.93</p>
-					</div>
-					<div class="row">
-						<p class="col-md-3 inforn text_right">Email:</p>
-						<p class="col-md-3 inforn"><a href="mail:Cherepovskaya@gmail.com">Cherepovskaya@gmail.com</a></p>
+        <!--// The name of the callback parameter, as specified by the YQL service-->
+        <!--jsonp: "callback",-->
 
-						<p class="col-md-3 inforn text_right">Phone number:</p>
-						<p class="col-md-3 inforn"><a href="tel:+380956367020">+38 095 636 70 20</a></p>
-					</div>
-					<div class="row">
-						<p class="col-md-3 inforn text_right">Social networks:</p>
-						<p class="col-md-3 inforn">
-							<a target="_blank" href="https://vk.com/hahahahahahahahahahahahahahahah">
-								<img src="img/logo_f.png">
-							</a> 
-							<a target="_blank" href="https://www.facebook.com/profile.php?id=1813320390">
-								<img src="img/logo_vk.png">
-							</a>
-						</p>
+        <!--// Tell jQuery we're expecting JSONP-->
+        <!--dataType: "jsonp",-->
 
-						<p class="col-md-3 inforn text_right">Education:</p>
-						<p class="col-md-3 inforn">2014-2015<br />
-										Kharkiv National University Karazin <br />
-										Mechanics and Mathematics Faculty <br />
-										Master of science <br/><br/>
+        <!--// Tell YQL what we want and that we want JSON-->
+        <!--data: {-->
+            <!--to: "cherepovskaya@gmail.com",-->
+            <!--body: "some text",-->
+            <!--subject: "Email subject",-->
+        <!--},-->
 
-										2010-2014 <br />
-										Donetsk National University <br />
-										Mathematics Faculty <br />
-										Bachelor of Science
-						</p>
-					</div>
-				</div>
-			
-		</div>
-		</div>
-		<div class="container color_border"></div>
-		<div class="container">
-			<div class="row page">
-				<p class="col-md-2 inforn text_right">Courses:</p>
-				<p class="col-md-2 inforn">"html/css", <br />
-									"php/mysql"</p>
-				<p class="col-md-2 inforn text_right">Skills:</p>
+        <!--// Work with the response-->
+        <!--success: function( response ) {
+            console.log( response); // server response
+        }
 
-				<ul class="col-md-2 inforn">
-					<li>Photoshop </li>
-					<li>Middle html/css </li>
-					<li>Basics JavaScript(jQuery) </li>
-					<li>Basics PHP, MySQL </li>
-					<li>Git </li>
-					<li>Basics  MVC (YII2, YII)</li>
-					<li>CMS(Wordpress, Joomla) </li>
+    });</script>-->
+    <script>
+        $( document ).ready(function() {
+            $( "#modal_go_to_email" ).on("click",function( ) {
 
-				</ul>
-				<p class="col-md-2 inforn text_right">Languages:</p>
+               var name =  $("input.name").val();
+                var phone =  $("input.phone").val();
+                var company =  $("input.company").val();
+                var profession =  $("input.profession").val();
+                console.log(profession, name, phone, company);
+                var message = "Позвони "+profession+" "+name+"телефон - "+phone+" из компании "+company;
+                $.ajax({
+                    url: "http://10.3.2.21:8080/",
 
-				<ul class="col-md-2 inforn">
-					<li>Russian - native </li>
-					<li>Ukrainian – native </li>
-					<li>English B1 – Level</li>
-				</ul>
-			</div>
-		</div>	
-		<div class="container">
-		 	<div class="row page">
-				<p class="col-md-4 inforn text_right">Experience:</p>
-				<p class="col-md-3 inforn">01.2015 - now   <br />
-									ITkp  <br />
-									- site administrator  <br />
-									- html/css coder  <br />
-									- website from scratch CMS: Wordpress, Joomla  <br />
-									- teamwork <br />
-									- SEO
-				</p>
-				<p class="col-md-3 inforn">10.2014 - 01.2015  <br />
-									S-party <br />
-									Manager <br />
-									- site administrator <br />
-									- search customers 
-				</p>
-			</div>
-		</div>
-		<footer class="footer">
+                    // The name of the callback parameter, as specified by the YQL service
+                    jsonp: "callback",
 
-		</footer> 
+                    // Tell jQuery we're expecting JSONP
+                    dataType: "jsonp",
 
-</body> 
+                    // Tell YQL what we want and that we want JSON
+                    data: {
+                        to: "cherepovskaya@gmail.com",
+                        body: message,
+                        subject: "Email subject",
+                    },
+
+                    // Work with the response
+                    success: function( response ) {
+                        console.log(response); // server response
+                        if (response.result == 1) {
+                            alert("Вам перезвонят");
+                        }else{}
+                        alert("Извините, но сообщение отправить не получилось");
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+<header class=" header">
+    <h2 class="text_center">Resume</h2>
+    <h2 class="text_center">Cherepovska Olha</h2>
+    <h3 class="text_center">Objective: Permanent work - web-developer</h3>
+</header>
+
+<div class="container">
+    <div class="row page">
+        <div class="col-md-3  img">
+            <img src="img/1.jpg">
+        </div>
+        <div class="col-md-9 color">
+            <div class="row text_inf">
+                <p class="col-md-3 inforn text_right">City:</p>
+                <p class="col-md-3 inforn">Kharkiv</p>
+
+                <p class="col-md-3 inforn text_right">Birthdate:</p>
+                <p class="col-md-3 inforn">26.09.93</p>
+            </div>
+            <div class="row">
+                <p class="col-md-3 inforn text_right">Email:</p>
+                <p class="col-md-3 inforn"><a href="mail:Cherepovskaya@gmail.com">Cherepovskaya@gmail.com</a></p>
+
+                <p class="col-md-3 inforn text_right">Phone number:</p>
+                <p class="col-md-3 inforn"><a href="tel:+380956367020">+38 095 636 70 20</a></p>
+            </div>
+            <div class="row">
+                <p class="col-md-3 inforn text_right">Social networks:</p>
+                <div class="col-md-3 inforn">
+                    <a target="_blank" href="https://vk.com/hahahahahahahahahahahahahahahah">
+                        <img src="img/logo_f.png">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=1813320390">
+                        <img src="img/logo_vk.png">
+                    </a>
+                    <!--....................Начало............................-->
+                    <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal">
+                        Contact with me
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Contact with me</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <form method="post">
+
+                                            <p>Name</p>
+                                            <input name="name" class="name" type="text"/>
+                                            <p>Phone number</p>
+                                            <input name="phone"  class="phone" type="text"/>
+                                            <p>Company</p>
+                                            <input name="company" class="company" type="text"/>
+                                            <p>Profession</p>
+                                            <input name="profession" type="text" class="profession"/>
+                                            <br/><br/>
+                                            <button type="button" id="modal_go_to_email" class="btn btn-primary">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--..............................-->
+
+                </div>
+
+                <p class="col-md-3 inforn text_right">Education:</p>
+                <p class="col-md-3 inforn">2014-2015<br/>
+                    Kharkiv National University Karazin <br/>
+                    Mechanics and Mathematics Faculty <br/>
+                    Master of science <br/><br/>
+
+                    2010-2014 <br/>
+                    Donetsk National University <br/>
+                    Mathematics Faculty <br/>
+                    Bachelor of Science
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container color_border"></div>
+<div class="container">
+    <div class="row page">
+        <p class="col-md-2 inforn text_right">Courses:</p>
+        <p class="col-md-2 inforn">"html/css", <br/>
+            "php/mysql"</p>
+        <p class="col-md-2 inforn text_right">Skills:</p>
+
+        <ul class="col-md-2 inforn">
+            <li>Photoshop</li>
+            <li>Middle html/css</li>
+            <li>Basics JavaScript(jQuery)</li>
+            <li>Basics PHP, MySQL</li>
+            <li>Git</li>
+            <li>Basics MVC (YII2, YII)</li>
+            <li>CMS(Wordpress, Joomla)</li>
+
+        </ul>
+        <p class="col-md-2 inforn text_right">Languages:</p>
+
+        <ul class="col-md-2 inforn">
+            <li>Russian - native</li>
+            <li>Ukrainian – native</li>
+            <li>English B1 – Level</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row page">
+        <p class="col-md-4 inforn text_right">Experience:</p>
+        <p class="col-md-3 inforn">01.2015 - now <br/>
+            ITkp <br/>
+            - site administrator <br/>
+            - html/css coder <br/>
+            - website from scratch CMS: Wordpress, Joomla <br/>
+            - teamwork <br/>
+            - SEO
+        </p>
+        <p class="col-md-3 inforn">10.2014 - 01.2015 <br/>
+            S-party <br/>
+            Manager <br/>
+            - site administrator <br/>
+            - search customers
+        </p>
+    </div>
+</div>
+<footer class="footer">
+
+</footer>
+
+</body>
 
 </html>
